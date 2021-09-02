@@ -8,6 +8,8 @@ body {
   font-size: 3rem;
   margin:  5%;
   color: #FEF2BF;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .container {
@@ -24,6 +26,18 @@ body {
   width: 200px;
   border: 10px solid black;
   border-radius: 20%;
+}
+
+.start {
+  margin: 25px;
+  display: inline-block;
+  height: 80px;
+  width: 150px;
+  border: 10px solid black;
+  border-radius: 20%;
+  background-color: orange;
+  font-size: 2rem;
+  color: white;
 }
 
 .game-over {
