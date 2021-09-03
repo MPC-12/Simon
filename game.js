@@ -4,7 +4,11 @@ var userClickedPattern = [];
 var level = 0;
 
 $(".start-btn").click(function() {
+  this.classList.add("game-over");
+  setTimeout( function() {
+    $(".start-btn")[0].classList.remove("game-over");    }, 300);
   if (level == 0) {
+    $(".start-btn")[0].innerHTML = "entró if";
     nextSequence();
   }
 });
@@ -38,6 +42,7 @@ function nextSequence() {
   var randomChosenColour = buttonColors[randomNumber];
   gamePatern.push(randomChosenColour);
   pushButton(randomChosenColour);
+  $(".start-btn")[0].innerHTML = "entró NS";
   $("#level-title")[0].innerHTML = "Level " + level;
   level++;
 }
