@@ -6,9 +6,8 @@ var level = 0;
 $(".start-btn").click(function() {
   this.classList.add("game-over");
   setTimeout( function() {
-    $(".start-btn")[0].classList.remove("game-over");    }, 300);
+    $(".start-btn")[0].classList.remove("game-over");    }, 500);
   if (level == 0) {
-    $(".start-btn")[0].innerHTML = "entró if";
     nextSequence();
   }
 });
@@ -42,7 +41,6 @@ function nextSequence() {
   var randomChosenColour = buttonColors[randomNumber];
   gamePatern.push(randomChosenColour);
   pushButton(randomChosenColour);
-  $(".start-btn")[0].innerHTML = "entró NS";
   $("#level-title")[0].innerHTML = "Level " + level;
   level++;
 }
@@ -50,5 +48,5 @@ function nextSequence() {
 function pushButton(buttonId) {
   var audio = new Audio("sounds/" + buttonId + ".mp3");
   audio.play();
-  $("." + buttonId).animate({opacity: 0.5},300).animate({opacity: 1},300);
+  $("." + buttonId).animate({opacity: 0.5},300).animate({opacity: 1},500);
 }
