@@ -31,7 +31,7 @@ $(".btn").click(function (){
     setTimeout( function() {
     userClickedPattern.length = 0;
     nextSequence();
-  }, 1000);
+  }, 2000);
 } else {
 
 }
@@ -48,7 +48,7 @@ function nextSequence() {
 }
 
 function pushButton(buttonId) {
-  $("." + buttonId).animate({opacity: 0.5},300).animate({opacity: 1},300);
   var audio = new Audio("sounds/" + buttonId + ".mp3");
   audio.play();
+  $("." + buttonId).animate({opacity: 0.5},300).animate({opacity: 1},300);
 }
