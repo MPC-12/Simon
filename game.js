@@ -3,7 +3,7 @@ var gamePatern = [];
 var userClickedPattern = [];
 var level = 0;
 
-$(".start").click(function() {
+$(".start-btn").click(function() {
   if (level == 0) {
     nextSequence();
   }
